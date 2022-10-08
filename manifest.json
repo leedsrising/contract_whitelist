@@ -1,21 +1,14 @@
 {
-    "name": "Contract Whitelist",
-    "version": "1.0.0",
-    "description": "Whitelist of deployed smart contracts",
-    "manifest_version": 3,
-    "author": "Leeds Rising & Anthony Peraza",
-    "action":{
-        "default_popup": "index.html",
-        "default_title": "Latest Covid Report"
-    },
-    "permissions": [
-        "pageCapture"
-    ],
-    "content_scripts": [
-        {
-            "matches": ["https://stackoverflow.com/*"],
-            "js": ["script.js"],
-            "run_at": "document_start"
-        }
-    ]
+  "name": "Hello Extensions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "permissions": [
+    "tabs",
+    "pageCapture"
+  ]
 }
