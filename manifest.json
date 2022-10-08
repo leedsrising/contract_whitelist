@@ -1,11 +1,21 @@
 {
-    "name": "Covid-19 Stats UK",
+    "name": "Contract Whitelist",
     "version": "1.0.0",
-    "description": "latest covid data of UK",
+    "description": "Whitelist of deployed smart contracts",
     "manifest_version": 3,
-    "author": "Sampurna Chapagain",
+    "author": "Leeds Rising & Anthony Peraza",
     "action":{
         "default_popup": "index.html",
         "default_title": "Latest Covid Report"
-    }
+    },
+    "permissions": [
+        "pageCapture"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://stackoverflow.com/*"],
+            "js": ["script.js"],
+            "run_at": "document_start"
+        }
+    ]
 }
