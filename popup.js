@@ -5,7 +5,12 @@ async function getCurrentTab() {
     chrome.pageCapture.saveAsMHTML(
         {tabId: tab.id},
         function(blob) {
-            console.log(blob);
+            var url = URL.createObjectURL(blob);
+            chrome.downloads.download({
+                url: url,
+                filename: 'testing_capture.mhtml'
+            });
+            console.log("downloaded");
         }
     )
     console.log(tab);
